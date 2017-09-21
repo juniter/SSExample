@@ -10,12 +10,10 @@
     </context:component-scan>
     <mvc:resources mapping="/static/**" location="/static/">
     </mvc:resources>
-    <mvc:resources mapping="/images/**" location="/static/images/">
-        <mvc:cache-control max-age="3600" cache-public="true"></mvc:cache-control>
-    </mvc:resources>
     <!--视图解析器，此处为JSP视图解析器，也可以有其他类型，参照官网说明文档-->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
         <property name="prefix" value="/WEB-INF/templates/"></property>
-        <property name="suffix" value=".jsp"></property>
+        <property name="suffix" value=".ftl"></property>
+        <!--<property name="cache" value="true"></property>-->
     </bean>
 </beans>
