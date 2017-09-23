@@ -2,18 +2,20 @@
 <head>
     <title>Hello World</title>
     <style type="text/css">
-        body {
-            background-color: #333333;
+        html,body {
+            background: url("static/images/bg001.jpg") no-repeat;
+            scoll:no
         }
 
         p {
             font-family: Consolas;
+            font-weight: bold;
         }
 
         .code {
             position: absolute;
             left: 40%;
-            top: 35%;
+            top: 20%;
         }
 
         .key-world {
