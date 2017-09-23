@@ -8,15 +8,13 @@
     <!--组件扫描，会扫描base-package包及其自包下使用注解方式注册的类，方法等，-->
     <context:component-scan base-package="com.example">
     </context:component-scan>
-    <mvc:resources mapping="/static/**" location="/static/">
-    </mvc:resources>
     <mvc:resources mapping="/images/**" location="/static/animation/images/ /static/images/">
         <mvc:cache-control max-age="3600" cache-public="true"></mvc:cache-control>
     </mvc:resources>
     <!--视图解析器，此处为JSP视图解析器，也可以有其他类型，参照官网说明文档-->
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
-        <property name="cache" value="true"></property>
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
         <property name="prefix" value="/WEB-INF/templates/"></property>
         <property name="suffix" value=".ftl"></property>
+        <!--<property name="cache" value="true"></property>-->
     </bean>
 </beans>

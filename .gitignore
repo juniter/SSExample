@@ -1,6 +1,9 @@
 out
+out/
+target/
 target
 .idea
 SSExample.iml
 *.ipr
 *.iws
+src/test/
